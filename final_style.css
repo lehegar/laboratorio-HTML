@@ -49,3 +49,44 @@ button {
   justify-content: space-between;
   padding: 12px;
 }
+
+/* ==========================================================================
+3. FOTOS MODELOS
+   ========================================================================== */
+
+.Fotos_Modelos {
+  display: flexbox;
+  font-size: 32px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* ==========================================================================
+4. DATOS DE CONTACTO
+   ========================================================================== */
+
+.content-box {
+  width: 1280px;
+  height: 100px;
+}
+
+.Menu-Final {
+  display: flex;
+  background-color: #212429;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #212429;
+}
+
+.Menu-Final a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1rem;
+}
+
+.botones_color_final {
+  background-color: rgb(255, 255, 255);
+}
