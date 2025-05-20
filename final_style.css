@@ -12,6 +12,7 @@ body {
   color: var(--text-color);
   box-sizing: border-box;
   margin: 0;
+  padding-top: 80px;
 }
 
 button {
@@ -35,9 +36,15 @@ a:hover {
    ========================================================================== */
 
 .header {
-  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff;
   border-bottom: 1px solid var(--text-color);
   padding: 0 32px;
+  height: 80px;
 }
 
 .boton-izquierda {
@@ -47,7 +54,6 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
-
 .Navegacion {
   display: flex;
   flex-grow: 1;
@@ -59,7 +65,6 @@ a:hover {
 
 .Navegacion a {
   color: #212429;
-  padding: 0.8rem;
   text-decoration: none;
   padding: 1.5rem;
   align-items: center;
@@ -71,9 +76,35 @@ a:hover {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
-  gap: 16px;
+  gap: 80px;
   align-items: center;
   justify-content: space-between;
+}
+
+.navegacion-completa {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  .navegacion-completa {
+    flex-direction: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .Navegacion {
+    display: none;
+  }
+
+  .botones-derecha {
+    display: none;
+  }
+
+  .Devoluciones-y-cambios a {
+    position: relative;
+    left: -15px;
+  }
 }
 
 /* ==========================================================================
@@ -175,8 +206,14 @@ footer .content-box {
 
   .content-box {
     align-items: center;
-
     justify-content: center;
+  }
+
+  .content-box a {
+    font-weight: bold;
+  }
+
+  .footer-grupo-item {
   }
 
   .Menu-Final {
