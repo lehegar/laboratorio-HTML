@@ -3,40 +3,76 @@
 :root {
   --size: 1rem;
   --text-color: #212429;
+  --transition-speed: 0.3s;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
+  color: var(--text-color);
+  box-sizing: border-box;
 }
 
 button {
   border: none;
   background: none;
+  cursor: pointer;
+  padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-speed) ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
 /* ==========================================================================
 1. BOTONES NAVEGACION
    ========================================================================== */
 
-.content-box {
-  width: 1280px;
-  height: 100px;
+.header {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--text-color);
+  padding: 0 16px;
 }
 
-.botones-navegacion {
+.boton-izquierda {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
-  font-size: 16px;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
-  border-bottom: 1px solid #212429;
 }
 
-.botones-navegacion a {
+.Navegacion {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+  font-size: 16px;
+  align-items: center;
+}
+
+.Navegacion a {
   color: #212429;
+  padding: 0.8rem;
   text-decoration: none;
-  padding: 0.5rem 0.5rem;
+  padding: 0.8rem 0.8rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.botones-derecha {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ==========================================================================
@@ -62,10 +98,9 @@ button {
 .Fotos_Modelos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
-  justify-content: center;
-  max-width: 800px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,6 +115,7 @@ button {
 
 .producto {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
   font-size: 14px;
@@ -88,15 +124,11 @@ button {
 4. DATOS DE CONTACTO
    ========================================================================== */
 
-.content-box {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .Menu-Final {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
   background-color: #212429;
   font-size: 16px;
   align-items: center;
