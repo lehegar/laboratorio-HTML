@@ -163,3 +163,21 @@ footer .content-box {
 .content-box {
   display: flex;
 }
+
+@media (max-width: 920px) {
+  .footer-grupo-item {
+    padding: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .content-box {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Menu-Final {
+  }
+}
