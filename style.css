@@ -1,74 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --size: 1rem;
   --text-color: #212429;
-  --navbar-height: 70px;
+  --transition-speed: 0.3s;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  
+  background-color: #ffffff;
+  color: var(--text-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 80px;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-speed) ease;
+}
 
-button{
-border: none;
-background: none;
+a:hover {
+  opacity: 0.7;
 }
 /* ==========================================================================
-1. NAV BAR
+1. BOTONES NAVEGACION
    ========================================================================== */
 
-
-   
-.content-box{
-  width:1280px;
-  height:100px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--text-color);
+  padding: 0 32px;
+  height: 80px;
 }
 
-  .navbar {
+.hamburger-menu {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 var(--size);
-  border-bottom: 1px solid #212429
-  }
+}
+.Navegacion {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+  font-size: 16px;
+  align-items: center;
+}
 
-  .navbar a {
-  color:#212429;
+.Navegacion a {
+  color: #212429;
   text-decoration: none;
-  padding: 1rem 1rem;
-  
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.botones-derecha {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navegacion-completa {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  .navegacion-completa {
+    flex-direction: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.8rem;
   }
 
+  .Navegacion {
+    display: none;
+  }
 
-/* ==========================================================================
-2. TITULO
-   ========================================================================== */
+  .botones-derecha {
+    display: none;
+  }
 
-h1 {
-
-font-size: .75rem
-
-
+  .Devoluciones-y-cambios a {
+    position: relative;
+    left: -15px;
+  }
 }
 
 /* ==========================================================================
-3. IMAGENES
+2. TITULO NUEVAS COLECCIONES
    ========================================================================== */
 
-   .fotos.modelos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-     gap: calc(var(--size) * 1.5);
-    padding: 5rem 1rem ;  
-   }
+.titulo_principal {
+  max-width: 1280px;
+  margin: 32px auto 16px;
+  padding: 16px 32px;
+}
 
-   * {box-sizing: border-box;}
+.titulo_principal h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+}
 
+/* ==========================================================================
+3. FOTOS MODELOS
+   ========================================================================== */
+
+.Fotos_Modelos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Fotos_Modelos img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.producto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+}
+/* ==========================================================================
+4. DATOS DE CONTACTO
+   ========================================================================== */
+
+footer .content-box {
+  background-color: #212429;
+  color: #ffffff;
+  padding: 24px 16px;
+  font-size: 16px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.Menu-Final {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  background-color: #212429;
+  color: #ffffff;
+  padding: 24px 16px;
+  font-size: 16px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.footer-grupo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-grupo-item a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1rem;
+}
+
+.botones_color_final {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.content-box {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  .footer-grupo-item {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .content-box {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-box a {
+    font-weight: bold;
+  }
+
+  .footer-grupo-item {
+  }
+
+  .Menu-Final {
+  }
+}
